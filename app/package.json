@@ -1,5 +1,8 @@
 {
   "packageManager": "yarn@4.5.3",
+  "scripts": {
+    "parse-schema": "node index.js"
+  },
   "dependencies": {
     "node-sql-parser": "^5.3.5"
   }

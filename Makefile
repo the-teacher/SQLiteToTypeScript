@@ -41,6 +41,10 @@ node_update_yarn:
 node_down:
 	docker-compose stop node
 
+node_parse_schema:
+	docker-compose exec node sh -c "yarn parse-schema"
+
+
 ################################################
 # Common
 ################################################

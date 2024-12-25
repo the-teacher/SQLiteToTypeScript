@@ -5,10 +5,17 @@ version: "3.7"
 services:
   sqlite:
     image: sqlite
-    volumes:
-      - ./data:/data
     environment:
       - SQLITE_DATABASE=database.db
       - SQLITE_USER=user
       - SQLITE_PASSWORD=qwerty
       - SQLITE_ROOT_PASSWORD=password
+    volumes:
+      - ./data:/data
+
+  node:
+    image: node:22
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    command: sleep infinity

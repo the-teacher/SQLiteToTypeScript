@@ -1,15 +1,12 @@
-# SQLite
-
-version: "3.7"
-
 services:
   sqlite:
-    image: sqlite
+    image: keinos/sqlite3:latest
     environment:
       - SQLITE_DATABASE=database.db
       - SQLITE_USER=user
       - SQLITE_PASSWORD=qwerty
       - SQLITE_ROOT_PASSWORD=password
+    command: sleep infinity
     volumes:
       - ./data:/data
 
